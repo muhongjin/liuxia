@@ -1,0 +1,62 @@
+
+server:
+  port: 9003
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      # 监控统计用的filter:stat日志用的filter:log4j防御sql注入的filter:wall
+      filters: wall, stat
+      url: jdbc:mysql://101.43.148.116:3306/history
+      username: root
+      password: mhj030209ml
+
+      # 初始化建立物理连接的个数
+      initial-size: 5
+      # 最小连接池
+      min-idle: 1
+      # 最大连接池
+      max-active: 96
+      # 获取连接时最大等待时间，单位毫秒
+      max-wait: 60000
+      # 有两个含义： 1) Destroy线程会检测连接的间隔时间 2) testWhileIdle的判断依据，详细看testWhileIdle属性的说明
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      # Druid用来测试连接是否可用的SQL语句
+      validationQuery: SELECT 'x'
+      # 申请连接的时候检测，如果空闲时间大于timeBetweenEvictionRunsMillis，执行validationQuery检测连接是否有效。
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      # 是否缓存preparedStatement,对支持游标的数据库性能提升巨大,在mysql5.0版本以后已经支持游标
+      poolPreparedStatements: true
+      # 要启用PSCache，必须配置大于0，当大于0时，poolPreparedStatements自动触发修改为true。
+      maxOpenPreparedStatements: 100
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 2MB
+      max-request-size: 1024MB
+  web:
+    resources:
+      static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:${web.upload}
+
+
+Author: AmorFati
+Link: https://amorfati.site/2021/11/25/SpringBoot%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/
+Source: AmorFati's Blog
+  Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+
+mybatis-plus:
+  type-aliases-package: com.example.remake.dao
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    # 下划线转大驼峰
+    map-underscore-to-camel-case: true
+    use-generated-keys: true
+
+# 文件上传的路径
+web:
+  upload: D://test
