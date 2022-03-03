@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="注册1.css">
+    <script src="jQuery.min.js"></script>
+</head>
+<body>
+    <div class= "a">
+        <div class="e">
+            <div class="b"><input type="text" id="un" placeholder="注册的id最多是12位并且不能含有%哦"></div>
+            <div class="f"><input type="password" id="pwd" placeholder="输入你的密码"></div>
+            <div class="c"><button type="button" id="btn1" >点击注册</button></div>
+            <div class="d"><button type="button" id="btn2" >已注册？点击返回</button></div>
+        </div>
+    </div>
+        <script>
+            let btn1 = document.getElementById('btn1');
+            let btn2 = document.getElementById('btn2');
+            btn2.addEventListener('click',function(){
+                let un = document.getElementById('un').value;//绝对要将该行内容放在触发事件(就是btn2.add.....)下，这样才可以读取用户输入的内容，否则就一直是空的
+                let pwd = document.getElementById('pwd').value;
+                
+                alert('即将返回开始界面')
+                window.location.href = 'page.html'
+                
+            })
+            btn1.addEventListener('click',function(){
+                let un = document.getElementById('un').value;//绝对要将该行内容放在触发事件(就是btn1.add.....)下，这样才可以读取用户输入的内容，否则就一直是空的
+                let pwd = document.getElementById('pwd').value;
+                console.log(un)
+                console.log(un.length)
+                
+                if(un.length>12||un.includes('%')){
+                    alert('最多注册12位而且不可包含%')   
+                }
+                else{
+               $.ajax({
+                   url:'http://101.43.148.116:9004/v1/register',
+                   data:{name:un,password:pwd},
+                   type:'POST',
+                   dataType:'json',
+                   success:function(data){
+                       if(data.result === '该用户名已被注册'){
+                           alert(data.result);
+                          
+                       }
+                       else{
+                      
+                       console.log(data.result);
+                      
+                       alert('注册成功')
+                       window.location.href = 'page.html'
+                       let un1 = JSON.stringify(un)
+                       sessionStorage.setItem('user',un1)
+                       }
+                            
+                            
+                   }
+                   
+               })
+                }
+            })
+        </script>
+</body>
+</html>

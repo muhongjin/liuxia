@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jQuery.min.js"></script>
+    <title>游戏首页备份</title>
+    <link rel="stylesheet" href="css/css4.css">
+    <link rel="import" href="page3.html">
+</head>
+<body onload = "movepic()">
+    <div id="toppic">
+        <img src="./image/toppic.png" alt="">
+    </div>
+    <div id="botpic">
+        <img src="./image/botpic.png" alt="">
+    </div>
+    <div class="box0">
+        <div id="juage1" style="position: absolute;height: 15%;width: 28%;top: 60%;left: 4%;">
+            <img src="image/对号.png" alt="" id="tru1">
+            <img src="image/叉号.png" alt="" id="fal1">
+        </div>
+        <div id="juage2" style="position: absolute;height: 15%;width: 28%;top: 60%;left: 36%;">
+            <img src="image/对号.png" alt="" id="tru2">
+            <img src="image/叉号.png" alt="" id="fal2">
+        </div>
+        <div id="juage3" style="position: absolute;height: 15%;width: 28%;top: 60%;right: 4%;">
+            <img src="image/对号.png" alt="" id="tru3">
+            <img src="image/叉号.png" alt="" id="fal3">
+        </div>
+        <div id="tanchuang" style="position: absolute;height: 60%;width: 50%;top: 20%;left: 25%;background-color: white;z-index: 100;border-radius: 10% 10% 0 0;box-shadow: 2px -2px 10px black;display: none;">
+            <img src="image/chenggong.png" alt="" id="chenggong" style=" display: none;position: absolute;width: 80%;height: 55%;top: 20%;left: 10%;">
+            <img src="image/shibai.png" alt="" id="shibai" style="display: none;position: absolute;width: 80%;height: 55%;top: 20%;left: 10%;">
+            <p id="wrt3">继续努力鸭！</p>
+        </div>
+        <div id="rank" style="position: absolute;cursor:pointer;height: 5%;width: 25%;top: 80%;left: 25%;background-color: white;z-index: 100;border-radius: 0 0 0 50%;/* border: 0.1px solid black; */box-shadow: -1px 2px 3px  black;display: none;">
+            <p id="wrt4">排行榜</p>
+        </div>
+        <div id="recome" style="position: absolute;cursor:pointer;height: 5%;width: 25%;top:80%;left: 50%;background-color: whi;z-index: 100;border-radius: 0 0 50% 0;/* border: 0.1px solid black; */box-shadow: 1px 2px 3px black;display: none;">
+            <p id="wrt5">分享给好友</p>
+        </div>
+        <p id="wrt1">第0题</p>
+        <p id="wrt2">请在下方 选中上一题 出现的图</p>
+        <div id="box5">我记住了</div>
+        <div id="box7">重新开始</div>
+        <div id="box6">
+            <img src="image/符号-时钟-line.png" alt="" id="clock">
+            <div id="tim"></div>
+        </div>
+    <div class="box1">
+        <img src="image/1.png" alt="" id="img1">
+        <img src="image/2.png" alt="" id="img2">
+        <img src="image/3.png" alt="" id="img3">
+        <img src="image/4.png" alt="" id="img4">
+        <img src="image/5.png" alt="" id="img5">
+        <img src="image/6.png" alt="" id="img6">
+        <img src="image/7.png" alt="" id="img7">
+        <img src="image/8.png" alt="" id="img8">
+        <img src="image/9.png" alt="" id="img9">
+        <img src="image/10.png" alt="" id="img10">
+    </div>
+    <div class="box2">
+        <img src="image/1.png" alt="" id="img11">
+        <img src="image/2.png" alt="" id="img22">
+        <img src="image/3.png" alt="" id="img33">
+        <img src="image/4.png" alt="" id="img44">
+        <img src="image/5.png" alt="" id="img55">
+        <img src="image/6.png" alt="" id="img66">
+        <img src="image/7.png" alt="" id="img77">
+        <img src="image/8.png" alt="" id="img88">
+        <img src="image/9.png" alt="" id="img99">
+        <img src="image/10.png" alt="" id="img1010">
+    </div>
+    <div class="box3">
+        <img src="image/1.png" alt="" id="img111">
+        <img src="image/2.png" alt="" id="img222">
+        <img src="image/3.png" alt="" id="img333">
+        <img src="image/4.png" alt="" id="img444">
+        <img src="image/5.png" alt="" id="img555">
+        <img src="image/6.png" alt="" id="img666">
+        <img src="image/7.png" alt="" id="img777">
+        <img src="image/8.png" alt="" id="img888">
+        <img src="image/9.png" alt="" id="img999">
+        <img src="image/10.png" alt="" id="img101010">
+    </div>
+    <div class="box4">
+        <img src="image/1.png" alt="" id="img1111">
+        <img src="image/2.png" alt="" id="img2222">
+        <img src="image/3.png" alt="" id="img3333">
+        <img src="image/4.png" alt="" id="img4444">
+        <img src="image/5.png" alt="" id="img5555">
+        <img src="image/6.png" alt="" id="img6666">
+        <img src="image/7.png" alt="" id="img7777">
+        <img src="image/8.png" alt="" id="img8888">
+        <img src="image/9.png" alt="" id="img9999">
+        <img src="image/10.png" alt="" id="img10101010">
+    </div>
+    </div>
+</body>
+<script type="text/javascript">
+    let img1=document.getElementById("img1")
+    let img2=document.getElementById("img2")
+    let img3=document.getElementById("img3")
+    let img4=document.getElementById("img4")
+    let img5=document.getElementById("img5")
+    let img6=document.getElementById("img6")
+    let img7=document.getElementById("img7")
+    let img8=document.getElementById("img8")
+    let img9=document.getElementById("img9")
+    let img10=document.getElementById("img10")
+    let img11=document.getElementById("img11")
+    let img22=document.getElementById("img22")
+    let img33=document.getElementById("img33")
+    let img44=document.getElementById("img44")
+    let img55=document.getElementById("img55")
+    let img66=document.getElementById("img66")
+    let img77=document.getElementById("img77")
+    let img88=document.getElementById("img88")
+    let img99=document.getElementById("img99")
+    let img1010=document.getElementById("img1010")
+    let img111=document.getElementById("img111")
+    let img222=document.getElementById("img222")
+    let img333=document.getElementById("img333")
+    let img444=document.getElementById("img444")
+    let img555=document.getElementById("img555")
+    let img666=document.getElementById("img666")
+    let img777=document.getElementById("img777")
+    let img888=document.getElementById("img888")
+    let img999=document.getElementById("img999")
+    let img101010=document.getElementById("img101010")
+    let img1111=document.getElementById("img1111")
+    let img2222=document.getElementById("img2222")
+    let img3333=document.getElementById("img3333")
+    let img4444=document.getElementById("img4444")
+    let img5555=document.getElementById("img5555")
+    let img6666=document.getElementById("img6666")
+    let img7777=document.getElementById("img7777")
+    let img8888=document.getElementById("img8888")
+    let img9999=document.getElementById("img9999")
+    let img10101010=document.getElementById("img10101010")
+    let wrt1=document.getElementById("wrt1")
+    let wrt2=document.getElementById("wrt2")
+    let wrt3=document.getElementById("wrt3")
+    let wrt4=document.getElementById("wrt4")
+    let wrt5=document.getElementById("wrt5")
+    let box5=document.getElementById("box5")
+    let box7=document.getElementById("box7")
+    let clock=document.getElementById("clock")
+    let tim=document.getElementById("tim")
+    let box1=document.querySelector(".box1")
+    let box2=document.querySelector(".box2")
+    let box3=document.querySelector(".box3")
+    let box4=document.querySelector(".box4")
+    let tru1=document.getElementById("tru1")
+    let fal1=document.getElementById("fal1")
+    let tru2=document.getElementById("tru2")
+    let fal2=document.getElementById("fal2")
+    let tru3=document.getElementById("tru3")
+    let fal3=document.getElementById("fal3")
+    let tanchuang=document.getElementById("tanchuang")
+    let rank=document.getElementById("rank")
+    let recome=document.getElementById("recome")
+    let chenggong=document.getElementById("chenggong")
+    let shibai=document.getElementById("shibai")
+    let arr=new Array(img1,img2,img3,img4,img5,img6,img7,img8,img9,img10)
+    let arr1=new Array(img11,img22,img33,img44,img55,img66,img77,img88,img99,img1010)
+    let arr2=new Array(img111,img222,img333,img444,img555,img666,img777,img888,img999,img101010)
+    let arr3=new Array(img1111,img2222,img3333,img4444,img5555,img6666,img7777,img8888,img9999,img10101010)
+    let toppic=document.getElementById("toppic")
+    let botpic=document.getElementById("botpic")
+    var user = JSON.parse(sessionStorage.getItem('user'))
+    function movepic(){
+        toppic.style.bottom="100%";
+        botpic.style.top="90%";
+    }
+    function randArr(onearr){
+        for(var i=0;i<onearr.length;i++){
+            var irand=parseInt(onearr.length*Math.random());
+            var temp=onearr[i];
+            onearr[i]=onearr[irand];
+            onearr[irand]=temp;
+        }
+        return onearr;
+    }
+    function decsame(){
+        while(arr1[0].src==arr2[0].src){
+            arr2[0].style.display="none";
+            randArr(arr2);
+            arr2[0].style.display="block";
+        }
+        while(arr2[0].src==arr3[0].src){
+            arr3[0].style.display="none";
+            randArr(arr3);
+            arr3[0].style.display="block";
+        }
+        while(arr3[0].src==arr1[0].src){
+            arr1[0].style.display="none";
+            randArr(arr1);
+            arr1[0].style.display="block";
+        }
+    }
+    var second=0;
+    var millisecond=0;
+    let x=arr[0];
+    box5.onclick=function(){
+        botpic.style.display="none";
+        clock.style.visibility="visible";
+        tim.style.visibility="visible";
+        box2.style.visibility="visible";
+        box3.style.visibility="visible";
+        box4.style.visibility="visible";
+        wrt2.style.visibility="visible";
+        box5.style.display="none";
+        box7.style.display="block";
+        /* arr[0].style.display="none";
+        randArr(arr);
+        arr[0].style.display="block"; */
+        setInterval(function timer(){
+            millisecond=millisecond+6;
+            if(millisecond>=1000){
+                millisecond=0;
+                second=second+1;
+            }
+            tim.innerHTML=second+':'+millisecond;
+        }, 6);
+        arr1[0].style.display="none";
+        randArr(arr1);
+        arr1[0].style.display="block";
+        arr2[0].style.display="none";
+        randArr(arr2);
+        arr2[0].style.display="block";
+        arr3[0].style.display="none";
+        randArr(arr3);
+        arr3[0].style.display="block";
+        decsame();
+        console.log(x.src);
+        randArr(arr);
+        x.style.display="none";
+        arr[0].style.display="block";
+        while(arr1[0].src!=x.src&&arr2[0].src!=x.src&&arr3[0].src!=x.src){
+            arr1[0].style.display="none";
+            randArr(arr1);
+            arr1[0].style.display="block";
+            arr2[0].style.display="none";
+            randArr(arr2);
+            arr2[0].style.display="block";
+            arr3[0].style.display="none";
+            randArr(arr3);
+            arr3[0].style.display="block";
+            decsame();
+        }
+        wrt1.innerHTML="第1题";
+    }
+    var times=1;
+    var n=0;
+    var trump3="music/回答正确！_耳聆网_[声音ID：13122].wav";
+    var trump3=new Audio(trump3);
+    var falmp3="music/快速错误的声音_耳聆网_[声音ID：10421].wav";
+    var falmp3=new Audio(falmp3);
+    var second2=0;
+    var millisecond2=0;
+/*     var ddtime=`${second2}秒${millisecond2}`; */
+    setInterval(function timer2(){
+            millisecond2=millisecond2+6;
+            if(millisecond2>=1000){
+                millisecond2=0;
+                second2=second2+1;
+            }
+        }, 6);
+/*     setInterval("console.log(second2)",1000);
+    setInterval("console.log(ddtime)",50);        */                                                                   /*音频的引入与播放  mp3.play();    mp3.pause();     mp3.load(); */
+    box2.onclick=function(){
+        if(arr1[0].src==x.src){
+            n++;
+            tru1.style.visibility="visible";
+            setTimeout("tru1.style.visibility='hidden'",100);
+            trump3.play();
+        }else{
+            fal1.style.visibility="visible";
+            setTimeout("fal1.style.visibility='hidden'",100);
+            falmp3.play();
+        }
+        arr1[0].style.display="none";
+        randArr(arr1);
+        arr1[0].style.display="block";
+        arr2[0].style.display="none";
+        randArr(arr2);
+        arr2[0].style.display="block";
+        arr3[0].style.display="none";
+        randArr(arr3);
+        arr3[0].style.display="block";
+        decsame();
+        x=arr[0];
+        console.log(x.src);
+        randArr(arr);
+        x.style.display="none";
+        console.log(x.src);
+        arr[0].style.display="block";
+        while(arr1[0].src!=x.src&&arr2[0].src!=x.src&&arr3[0].src!=x.src){
+            arr1[0].style.display="none";
+            randArr(arr1);
+            arr1[0].style.display="block";
+            arr2[0].style.display="none";
+            randArr(arr2);
+            arr2[0].style.display="block";
+            arr3[0].style.display="none";
+            randArr(arr3);
+            arr3[0].style.display="block";
+            decsame();
+        }
+        times++;
+        wrt1.innerHTML=`第${times}题`;
+        if(times==21){
+            clock.style.visibility="hidden";
+            tim.style.visibility="hidden";
+            box1.style.visibility="hidden";
+            box2.style.visibility="hidden";
+            box3.style.visibility="hidden";
+            box4.style.visibility="hidden";
+            wrt1.style.visibility="hidden";
+            wrt2.style.visibility="hidden";
+            box7.style.display="none";
+            tanchuang.style.display="block";
+            rank.style.display="block";
+            recome.style.display="block";
+            if(n==20){
+                chenggong.style.display="block";
+                wrt3.innerHTML=second2+':'+millisecond2+"成功!";
+                let ddtime = second2+millisecond2/1000.0;
+                $.ajax({
+                    type:"POST",
+                    url:"http://101.43.148.116:9002/v1/admin/twt/sort",                   
+                    data:{
+                        "name": user,
+                        "time": ddtime
+                    },
+                    dataType:"JSON",
+                    success:function(data){
+                        console.log(data);
+                    }
+                });
+            }else{
+                shibai.style.display="block";
+                wrt5.innerHTML="重新挑战";
+            }
+        }
+    }
+    box3.onclick=function(){
+        if(arr2[0].src==x.src){
+            n++;
+            tru2.style.visibility="visible";
+            setTimeout("tru2.style.visibility='hidden'",100);
+            trump3.play();
+        }else{
+            fal2.style.visibility="visible";
+            setTimeout("fal2.style.visibility='hidden'",100);
+            falmp3.play();
+        }
+        arr1[0].style.display="none";
+        randArr(arr1);
+        arr1[0].style.display="block";
+        arr2[0].style.display="none";
+        randArr(arr2);
+        arr2[0].style.display="block";
+        arr3[0].style.display="none";
+        randArr(arr3);
+        arr3[0].style.display="block";
+        decsame();
+        x=arr[0];
+        console.log(x.src);
+        randArr(arr);
+        x.style.display="none";
+        console.log(x.src);
+        arr[0].style.display="block";
+        while(arr1[0].src!=x.src&&arr2[0].src!=x.src&&arr3[0].src!=x.src){
+            arr1[0].style.display="none";
+            randArr(arr1);
+            arr1[0].style.display="block";
+            arr2[0].style.display="none";
+            randArr(arr2);
+            arr2[0].style.display="block";
+            arr3[0].style.display="none";
+            randArr(arr3);
+            arr3[0].style.display="block";
+            decsame();
+        }
+        times++;
+        wrt1.innerHTML=`第${times}题`;
+        if(times==21){
+            clock.style.visibility="hidden";
+            tim.style.visibility="hidden";
+            box1.style.visibility="hidden";
+            box2.style.visibility="hidden";
+            box3.style.visibility="hidden";
+            box4.style.visibility="hidden";
+            wrt1.style.visibility="hidden";
+            wrt2.style.visibility="hidden";
+            box7.style.display="none";
+            tanchuang.style.display="block";
+            rank.style.display="block";
+            recome.style.display="block";
+            if(n==20){
+                chenggong.style.display="block";
+                wrt3.innerHTML=second2+':'+millisecond2+"成功!";
+                let ddtime = second2+millisecond2/1000.0;
+                $.ajax({
+                    type:"POST",
+                    url:"http://101.43.148.116:9002/v1/admin/twt/sort",                 
+                    data:{
+                        "name": user,
+                        "time": ddtime
+                    },
+                    dataType:"JSON",
+                    success:function(data){
+                        console.log(data);
+                    }
+                });
+            }else{
+                shibai.style.display="block";
+                wrt5.innerHTML="重新挑战";
+            }
+        }
+    }
+    box4.onclick=function(){
+        if(arr3[0].src==x.src){
+            n++;
+            tru3.style.visibility="visible";
+            setTimeout("tru3.style.visibility='hidden'",100);
+            trump3.play();
+        }else{
+            fal3.style.visibility="visible";
+            setTimeout("fal3.style.visibility='hidden'",100);
+            falmp3.play();
+        }
+        arr1[0].style.display="none";
+        randArr(arr1);
+        arr1[0].style.display="block";
+        arr2[0].style.display="none";
+        randArr(arr2);
+        arr2[0].style.display="block";
+        arr3[0].style.display="none";
+        randArr(arr3);
+        arr3[0].style.display="block";
+        decsame();
+        x=arr[0];
+        console.log(x.src);
+        randArr(arr);
+        x.style.display="none";
+        console.log(x.src);
+        arr[0].style.display="block";
+        while(arr1[0].src!=x.src&&arr2[0].src!=x.src&&arr3[0].src!=x.src){
+            arr1[0].style.display="none";
+            randArr(arr1);
+            arr1[0].style.display="block";
+            arr2[0].style.display="none";
+            randArr(arr2);
+            arr2[0].style.display="block";
+            arr3[0].style.display="none";
+            randArr(arr3);
+            arr3[0].style.display="block";
+            decsame();
+        }
+        times++;
+        wrt1.innerHTML=`第${times}题`;
+        if(times==21){
+            clock.style.visibility="hidden";
+            tim.style.visibility="hidden";
+            box1.style.visibility="hidden";
+            box2.style.visibility="hidden";
+            box3.style.visibility="hidden";
+            box4.style.visibility="hidden";
+            wrt1.style.visibility="hidden";
+            wrt2.style.visibility="hidden";
+            box7.style.display="none";
+            tanchuang.style.display="block";
+            rank.style.display="block";
+            recome.style.display="block";
+            if(n==20){
+                chenggong.style.display="block";
+                wrt3.innerHTML=second2+':'+millisecond2+"成功!";
+                let ddtime = second2+millisecond2/1000.0;
+                $.ajax({
+                    type:"POST",
+                    url:"http://101.43.148.116:9002/v1/admin/twt/sort",                    
+                    data:{
+                        "name": user,
+                        "time": ddtime
+                    },
+                    dataType:"JSON",
+                    success:function(data){
+                        console.log(data);                       
+                    }
+                });
+            }else{
+                shibai.style.display="block";
+                wrt5.innerHTML="重新挑战";
+            }
+        }
+    }
+    box7.onclick=function(){
+        window.location.reload();
+    }
+    recome.onclick=function(){
+        window.location.reload();
+    }
+    rank.onclick=function(){
+        /* window.location.href="page3.html"; */
+        $.ajax({
+        type:"GET",
+        url:"http://101.43.148.116:9003/v1/admin/twt/history",
+        data:{name:user},
+        
+        dataType:"json",
+        success:function(data){
+            window.location.href="page3.html";
+        },
+        error:function(data){
+            alert("请求失败");
+        }
+    });
+    }
+   
+</script>
+
+<!-- <script>
+    let img1=document.getElementById("img1")
+    let img2=document.getElementById("img2")
+    let img3=document.getElementById("img3")
+    let img4=document.getElementById("img4")
+    let img5=document.getElementById("img5")
+    let img6=document.getElementById("img6")
+    let img7=document.getElementById("img7")
+    let img8=document.getElementById("img8")
+    let img9=document.getElementById("img9")
+    let img10=document.getElementById("img10")
+    let img11=document.getElementById("img11")
+    let img22=document.getElementById("img22")
+    let img33=document.getElementById("img33")
+    let img44=document.getElementById("img44")
+    let img55=document.getElementById("img55")
+    let img66=document.getElementById("img66")
+    let img77=document.getElementById("img77")
+    let img88=document.getElementById("img88")
+    let img99=document.getElementById("img99")
+    let img1010=document.getElementById("img1010")
+    let img111=document.getElementById("img111")
+    let img222=document.getElementById("img222")
+    let img333=document.getElementById("img333")
+    let img444=document.getElementById("img444")
+    let img555=document.getElementById("img555")
+    let img666=document.getElementById("img666")
+    let img777=document.getElementById("img777")
+    let img888=document.getElementById("img888")
+    let img999=document.getElementById("img999")
+    let img101010=document.getElementById("img101010")
+    let img1111=document.getElementById("img1111")
+    let img2222=document.getElementById("img2222")
+    let img3333=document.getElementById("img3333")
+    let img4444=document.getElementById("img4444")
+    let img5555=document.getElementById("img5555")
+    let img6666=document.getElementById("img6666")
+    let img7777=document.getElementById("img7777")
+    let img8888=document.getElementById("img8888")
+    let img9999=document.getElementById("img9999")
+    let img10101010=document.getElementById("img10101010")
+    let wrt1=document.getElementById("wrt1")
+    let wrt2=document.getElementById("wrt2")
+    let wrt3=document.getElementById("wrt3")
+    let wrt4=document.getElementById("wrt4")
+    let wrt5=document.getElementById("wrt5")
+    let box5=document.getElementById("box5")
+    let box7=document.getElementById("box7")
+    let clock=document.getElementById("clock")
+    let tim=document.getElementById("tim")
+    let box1=document.querySelector(".box1")
+    let box2=document.querySelector(".box2")
+    let box3=document.querySelector(".box3")
+    let box4=document.querySelector(".box4")
+    let tru1=document.getElementById("tru1")
+    let fal1=document.getElementById("fal1")
+    let tru2=document.getElementById("tru2")
+    let fal2=document.getElementById("fal2")
+    let tru3=document.getElementById("tru3")
+    let fal3=document.getElementById("fal3")
+    let tanchuang=document.getElementById("tanchuang")
+    let rank=document.getElementById("rank")
+    let recome=document.getElementById("recome")
+    let chenggong=document.getElementById("chenggong")
+    let shibai=document.getElementById("shibai")
+    let arr=new Array(img1,img2,img3,img4,img5,img6,img7,img8,img9,img10)
+    let arr1=new Array(img11,img22,img33,img44,img55,img66,img77,img88,img99,img1010)
+    let arr2=new Array(img111,img222,img333,img444,img555,img666,img777,img888,img999,img101010)
+    let arr3=new Array(img1111,img2222,img3333,img4444,img5555,img6666,img7777,img8888,img9999,img10101010)
+    let toppic=document.getElementById("toppic")
+    let botpic=document.getElementById("botpic")
+    function movepic(){
+        toppic.style.bottom="100%";
+        botpic.style.top="90%";
+    }
+    function randArr(onearr){
+        for(var i=0;i<onearr.length;i++){
+            var irand=parseInt(onearr.length*Math.random());
+            var temp=onearr[i];
+            onearr[i]=onearr[irand];
+            onearr[irand]=temp;
+        }
+        return onearr;
+    }
+    function decsame(){
+        while(arr1[0].src==arr2[0].src){
+            arr2[0].style.display="none";
+            randArr(arr2);
+            arr2[0].style.display="block";
+        }
+        while(arr2[0].src==arr3[0].src){
+            arr3[0].style.display="none";
+            randArr(arr3);
+            arr3[0].style.display="block";
+        }
+        while(arr3[0].src==arr1[0].src){
+            arr1[0].style.display="none";
+            randArr(arr1);
+            arr1[0].style.display="block";
+        }
+    }
+    var second=0;
+    var millisecond=0;
+    let x=arr[0];
+    box5.onclick=function(){
+        botpic.style.display="none";
+        clock.style.visibility="visible";
+        tim.style.visibility="visible";
+        box2.style.visibility="visible";
+        box3.style.visibility="visible";
+        box4.style.visibility="visible";
+        wrt2.style.visibility="visible";
+        box5.style.display="none";
+        box7.style.display="block";
+        /* arr[0].style.display="none";
+        randArr(arr);
+        arr[0].style.display="block"; */
+        setInterval(function timer(){
+            millisecond=millisecond+50;
+            if(millisecond>=1000){
+                millisecond=0;
+                second=second+1;
+            }
+            tim.innerHTML=second+':'+millisecond;
+        }, 50);
+        arr1[0].style.display="none";
+        randArr(arr1);
+        arr1[0].style.display="block";
+        arr2[0].style.display="none";
+        randArr(arr2);
+        arr2[0].style.display="block";
+        arr3[0].style.display="none";
+        randArr(arr3);
+        arr3[0].style.display="block";
+        decsame();
+        console.log(x.src);
+        randArr(arr);
+        x.style.display="none";
+        arr[0].style.display="block";
+        while(arr1[0].src!=x.src&&arr2[0].src!=x.src&&arr3[0].src!=x.src){
+            arr1[0].style.display="none";
+            randArr(arr1);
+            arr1[0].style.display="block";
+            arr2[0].style.display="none";
+            randArr(arr2);
+            arr2[0].style.display="block";
+            arr3[0].style.display="none";
+            randArr(arr3);
+            arr3[0].style.display="block";
+            decsame();
+        }
+        wrt1.innerHTML="第1题";
+    }
+    var times=1;
+    var n=0;
+    var trump3="music/回答正确！_耳聆网_[声音ID：13122].wav";
+    var trump3=new Audio(trump3);
+    var falmp3="music/快速错误的声音_耳聆网_[声音ID：10421].wav";
+    var falmp3=new Audio(falmp3);
+    var second2=0;
+    var millisecond2=0;
+    var ddtime=`${second2}秒${millisecond2}`;
+    setInterval(function timer2(){
+            millisecond2=millisecond2+50;
+            if(millisecond2>=1000){
+                millisecond2=0;
+                second2=second2+1;
+            }
+        }, 50);
+/*     setInterval("console.log(second2)",1000);
+    setInterval("console.log(ddtime)",50);        */                                                                   /*音频的引入与播放  mp3.play();    mp3.pause();     mp3.load(); */
+    box2.onclick=function(){
+        if(arr1[0].src==x.src){
+            n++;
+            tru1.style.visibility="visible";
+            setTimeout("tru1.style.visibility='hidden'",100);
+            trump3.play();
+        }else{
+            fal1.style.visibility="visible";
+            setTimeout("fal1.style.visibility='hidden'",100);
+            falmp3.play();
+        }
+        arr1[0].style.display="none";
+        randArr(arr1);
+        arr1[0].style.display="block";
+        arr2[0].style.display="none";
+        randArr(arr2);
+        arr2[0].style.display="block";
+        arr3[0].style.display="none";
+        randArr(arr3);
+        arr3[0].style.display="block";
+        decsame();
+        x=arr[0];
+        console.log(x.src);
+        randArr(arr);
+        x.style.display="none";
+        console.log(x.src);
+        arr[0].style.display="block";
+        while(arr1[0].src!=x.src&&arr2[0].src!=x.src&&arr3[0].src!=x.src){
+            arr1[0].style.display="none";
+            randArr(arr1);
+            arr1[0].style.display="block";
+            arr2[0].style.display="none";
+            randArr(arr2);
+            arr2[0].style.display="block";
+            arr3[0].style.display="none";
+            randArr(arr3);
+            arr3[0].style.display="block";
+            decsame();
+        }
+        times++;
+        wrt1.innerHTML=`第${times}题`;
+        if(times==21){
+            clock.style.visibility="hidden";
+            tim.style.visibility="hidden";
+            box1.style.visibility="hidden";
+            box2.style.visibility="hidden";
+            box3.style.visibility="hidden";
+            box4.style.visibility="hidden";
+            wrt1.style.visibility="hidden";
+            wrt2.style.visibility="hidden";
+            box7.style.display="none";
+            tanchuang.style.display="block";
+            rank.style.display="block";
+            recome.style.display="block";
+            if(n==20){
+                chenggong.style.display="block";
+                wrt3.innerHTML=second2+':'+millisecond2+"成功!";
+                $.ajax({
+                    type:"POST",
+                    url:"http://101.43.148.116:9003/v1/admin/twt/history",
+                    async:true,
+                    data:{
+                        "name": "测试数据1",
+                        "time": second2
+                    },
+                    dataType:"JSON",
+                    success:function(data){
+                        alert('已存储您的数据');
+                        console.log(data);
+                    }
+                });
+            }else{
+                shibai.style.display="block";
+                wrt5.innerHTML="重新挑战";
+            }
+        }
+    }
+    box3.onclick=function(){
+        if(arr2[0].src==x.src){
+            n++;
+            tru2.style.visibility="visible";
+            setTimeout("tru2.style.visibility='hidden'",100);
+            trump3.play();
+        }else{
+            fal2.style.visibility="visible";
+            setTimeout("fal2.style.visibility='hidden'",100);
+            falmp3.play();
+        }
+        arr1[0].style.display="none";
+        randArr(arr1);
+        arr1[0].style.display="block";
+        arr2[0].style.display="none";
+        randArr(arr2);
+        arr2[0].style.display="block";
+        arr3[0].style.display="none";
+        randArr(arr3);
+        arr3[0].style.display="block";
+        decsame();
+        x=arr[0];
+        console.log(x.src);
+        randArr(arr);
+        x.style.display="none";
+        console.log(x.src);
+        arr[0].style.display="block";
+        while(arr1[0].src!=x.src&&arr2[0].src!=x.src&&arr3[0].src!=x.src){
+            arr1[0].style.display="none";
+            randArr(arr1);
+            arr1[0].style.display="block";
+            arr2[0].style.display="none";
+            randArr(arr2);
+            arr2[0].style.display="block";
+            arr3[0].style.display="none";
+            randArr(arr3);
+            arr3[0].style.display="block";
+            decsame();
+        }
+        times++;
+        wrt1.innerHTML=`第${times}题`;
+        if(times==21){
+            clock.style.visibility="hidden";
+            tim.style.visibility="hidden";
+            box1.style.visibility="hidden";
+            box2.style.visibility="hidden";
+            box3.style.visibility="hidden";
+            box4.style.visibility="hidden";
+            wrt1.style.visibility="hidden";
+            wrt2.style.visibility="hidden";
+            box7.style.display="none";
+            tanchuang.style.display="block";
+            rank.style.display="block";
+            recome.style.display="block";
+            if(n==20){
+                chenggong.style.display="block";
+                wrt3.innerHTML=second2+':'+millisecond2+"成功!";
+                $.ajax({
+                    type:"POST",
+                    url:"http://101.43.148.116:9003/v1/admin/twt/history",
+                    async:true,
+                    data:{
+                        "name": "测试数据1",
+                        "time": second2
+                    },
+                    dataType:"JSON",
+                    success:function(data){
+                        alert('已存储您的数据');
+                        console.log(data);
+                    }
+                });
+            }else{
+                shibai.style.display="block";
+                wrt5.innerHTML="重新挑战";
+            }
+        }
+    }
+    box4.onclick=function(){
+        if(arr3[0].src==x.src){
+            n++;
+            tru3.style.visibility="visible";
+            setTimeout("tru3.style.visibility='hidden'",100);
+            trump3.play();
+        }else{
+            fal3.style.visibility="visible";
+            setTimeout("fal3.style.visibility='hidden'",100);
+            falmp3.play();
+        }
+        arr1[0].style.display="none";
+        randArr(arr1);
+        arr1[0].style.display="block";
+        arr2[0].style.display="none";
+        randArr(arr2);
+        arr2[0].style.display="block";
+        arr3[0].style.display="none";
+        randArr(arr3);
+        arr3[0].style.display="block";
+        decsame();
+        x=arr[0];
+        console.log(x.src);
+        randArr(arr);
+        x.style.display="none";
+        console.log(x.src);
+        arr[0].style.display="block";
+        while(arr1[0].src!=x.src&&arr2[0].src!=x.src&&arr3[0].src!=x.src){
+            arr1[0].style.display="none";
+            randArr(arr1);
+            arr1[0].style.display="block";
+            arr2[0].style.display="none";
+            randArr(arr2);
+            arr2[0].style.display="block";
+            arr3[0].style.display="none";
+            randArr(arr3);
+            arr3[0].style.display="block";
+            decsame();
+        }
+        times++;
+        wrt1.innerHTML=`第${times}题`;
+        if(times==21){
+            clock.style.visibility="hidden";
+            tim.style.visibility="hidden";
+            box1.style.visibility="hidden";
+            box2.style.visibility="hidden";
+            box3.style.visibility="hidden";
+            box4.style.visibility="hidden";
+            wrt1.style.visibility="hidden";
+            wrt2.style.visibility="hidden";
+            box7.style.display="none";
+            tanchuang.style.display="block";
+            rank.style.display="block";
+            recome.style.display="block";
+            if(n==20){
+                chenggong.style.display="block";
+                wrt3.innerHTML=second2+':'+millisecond2+"成功!";
+                $.ajax({
+                    type:"POST",
+                    url:"http://101.43.148.116:9003/v1/admin/twt/history",
+                    async:true,
+                    data:{
+                        "name": "测试数据1",
+                        "time": second2
+                    },
+                    dataType:"JSON",
+                    success:function(data){
+                        alert('已存储您的数据');
+                        console.log(data);
+                    }
+                });
+            }else{
+                shibai.style.display="block";
+                wrt5.innerHTML="重新挑战";
+            }
+        }
+    }
+    box7.onclick=function(){
+        window.location.reload();
+    }
+    recome.onclick=function(){
+        window.location.reload();
+    }
+    rank.onclick=function(){
+        /* window.location.href="page3.html"; */
+        $.ajax({
+        type:"GET",
+        url:"http://101.43.148.116:9003/v1/admin/twt/history?name=测试数据1",
+        async:true,
+        dataType:"json",
+        success:function(data){
+            /* window.location.href="page3.html"; */
+            console.log(data);
+            let timearr = [];
+            let results = data.result;
+            for(let i=0;i<results.length;i++){
+                timearr.push(results[i].time);
+            }
+            console.log(timearr);
+        },
+        error:function(data){
+            alert("请求失败");
+        }
+    });
+    }
+</script>
+</html> -->

@@ -1,0 +1,430 @@
+html {
+    background-color: rgb(240, 234, 234);
+}
+.box1{
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 40%;
+    left: 30%;
+    background-color: white;
+    box-shadow: 5px -2px 10px black;
+}
+p#wrt1{
+    position: absolute;
+    font-weight: bolder;
+    font-size: 2em;
+    left: 265px;
+    top: 55px;
+}
+p#wrt2{
+    position: absolute;
+    color: grey;
+    left: 198px;
+    top: 405px;
+    visibility: hidden;
+}
+#box2{
+    position: absolute;
+    height: 30%;
+    width: 50%;
+    left: 25%;
+    top: 20%; 
+}
+#box3{
+    position: absolute;
+    height: 30%;
+    width: 50%;
+    left: 25%;
+    top: 20%;
+}
+#box4{
+    position: absolute;
+    height: 30%;
+    width: 50%;
+    left: 25%;
+    top: 20%;
+}
+#box5{
+    position: absolute;
+    height: 30%;
+    width: 50%;
+    left: 25%;
+    top: 20%;
+}
+#box6{
+    position: absolute;
+    height: 30%;
+    width: 50%;
+    left: 25%;
+    top: 20%; 
+}
+#box7{
+    position: absolute;
+    height: 30%;
+    width: 50%;
+    left: 25%;
+    top: 20%;
+}
+#box8{
+    position: absolute;
+    height: 30%;
+    width: 50%;
+    left: 25%;
+    top: 20%;
+}
+#box9{
+    position: absolute;
+    height: 30%;
+    width: 50%;
+    left: 25%;
+    top: 20%;
+}
+#box10{
+    position: absolute;
+    height: 30%;
+    width: 50%;
+    left: 25%;
+    top: 20%;
+}
+#box11{
+    position: absolute;
+    height: 30%;
+    width: 50%;
+    left: 25%;
+    top: 20%;
+    box-shadow: 0px 0px 10px 5px rgb(189, 189, 243); /*四周都有阴影的方法就是设置4个px，然后不是四周都有阴影，则设置两个px*/
+}
+#img1{
+    width: 100%;
+    height: 100%;
+}
+#img2{
+    width: 100%;
+    height: 100%;
+}
+#img3{
+    width: 100%;
+    height: 100%;
+}
+#img4{
+    width: 100%;
+    height: 100%;
+}
+#img5{
+    width: 100%;
+    height: 100%;
+}
+#img6{
+    width: 100%;
+    height: 100%;
+}
+#img7{
+    width: 100%;
+    height: 100%;
+}
+#img8{
+    width: 100%;
+    height: 100%;
+}
+#img9{
+    width: 100%;
+    height: 100%;
+}
+#img10{
+    width: 100%;
+    height: 100%;
+}
+#box12{
+    position: absolute;
+    height: 4%;
+    width: 15%;
+    left: 42.5%;
+    top: 85%;
+    font-weight: bolder;
+    color: white;
+    background-color: black;
+    border-radius: 30%;   
+    text-align: center;
+    line-height: 160%;
+    vertical-align: middle;  /*用line-height和vertical-align两个属性来控制文字在盒子中的垂直居中！*/
+    cursor: pointer;
+    box-shadow: 5px 5px 5px black;
+}
+#box13{
+    position: absolute;
+    height: 4%;
+    width: 20%;
+    left: 42.5%;
+    top: 80%;
+}
+#tim{
+    position: absolute;
+    height: 80%;
+    width: 70%;
+    top: 10%;
+    left: 30%;
+    visibility: hidden;
+}
+#clock{
+    width: 30px;
+    height: 30px;
+    visibility: hidden;
+}
+#box14{
+    position: absolute;
+    background-color: white;
+    height: 15%;
+    width: 28%;
+    left: 4%;
+    top: 60%;
+    box-shadow: 5px 5px 5px rgb(189, 189, 243);
+    visibility: hidden;
+}
+#box14:hover{
+    box-shadow: 5px 5px 5px inset;
+}
+#hezi1{
+    position: absolute;
+}
+#hezi2{
+    position: absolute;
+}
+#hezi3{
+    position: absolute;
+}
+#hezi4{
+    position: absolute;
+}
+#hezi5{
+    position: absolute;
+}
+#hezi6{
+    position: absolute;
+}
+#hezi7{
+    position: absolute;
+}
+#hezi8{
+    position: absolute;
+}
+#hezi9{
+    position: absolute;
+}
+#hezi10{
+    position: absolute;
+    box-shadow: 5px 5px 5px rgb(189, 189, 243);
+}
+#img11{
+    width: 100%;
+    height: 100%;
+}
+#img22{
+    width: 100%;
+    height: 100%;
+}
+#img33{
+    width: 100%;
+    height: 100%;
+}
+#img44{
+    width: 100%;
+    height: 100%;
+}
+#img55{
+    width: 100%;
+    height: 100%;
+}
+#img66{
+    width: 100%;
+    height: 100%;
+}
+#img77{
+    width: 100%;
+    height: 100%;
+}
+#img88{
+    width: 100%;
+    height: 100%;
+}
+#img99{
+    width: 100%;
+    height: 100%;
+}
+#img1010{
+    width: 100%;
+    height: 100%;
+}
+#box15{
+    position: absolute;
+    background-color: white;
+    height: 15%;
+    width: 28%;
+    left: 36%;
+    top: 60%;
+    box-shadow: 5px 5px 5px rgb(189, 189, 243);
+    visibility: hidden;
+}
+#box15:hover{
+    box-shadow: 5px 5px 5px inset;
+}
+#hezi11{
+    position: absolute;
+}
+#hezi22{
+    position: absolute;
+}
+#hezi33{
+    position: absolute;
+}
+#hezi44{
+    position: absolute;
+}
+#hezi55{
+    position: absolute;
+}
+#hezi66{
+    position: absolute;
+}
+#hezi77{
+    position: absolute;
+}
+#hezi88{
+    position: absolute;
+}
+#hezi99{
+    position: absolute;
+}
+#hezi1010{
+    position: absolute;
+    box-shadow: 5px 5px 5px rgb(189, 189, 243);
+}
+#img111{
+    width: 100%;
+    height: 100%;
+}
+#img222{
+    width: 100%;
+    height: 100%;
+}
+#img333{
+    width: 100%;
+    height: 100%;
+}
+#img444{
+    width: 100%;
+    height: 100%;
+}
+#img555{
+    width: 100%;
+    height: 100%;
+}
+#img666{
+    width: 100%;
+    height: 100%;
+}
+#img777{
+    width: 100%;
+    height: 100%;
+}
+#img888{
+    width: 100%;
+    height: 100%;
+}
+#img999{
+    width: 100%;
+    height: 100%;
+}
+#img101010{
+    width: 100%;
+    height: 100%;
+}
+#box16{
+    position: absolute;
+    background-color: white;
+    height: 15%;
+    width: 28%;
+    right: 4%;
+    top: 60%;
+    box-shadow: 5px 5px 5px rgb(189, 189, 243);
+    visibility: hidden;
+}
+#box16:hover{
+    box-shadow: 5px 5px 5px inset;
+}
+#hezi111{
+    position: absolute;
+}
+#hezi222{
+    position: absolute;
+}
+#hezi333{
+    position: absolute;
+}
+#hezi444{
+    position: absolute;
+}
+#hezi555{
+    position: absolute;
+}
+#hezi666{
+    position: absolute;
+}
+#hezi777{
+    position: absolute;
+}
+#hezi888{
+    position: absolute;
+}
+#hezi999{
+    position: absolute;
+}
+#hezi101010{
+    position: absolute;
+    box-shadow: 5px 5px 5px rgb(189, 189, 243);
+}
+#img1111{
+    width: 100%;
+    height: 100%;
+}
+#img2222{
+    width: 100%;
+    height: 100%;
+}
+#img3333{
+    width: 100%;
+    height: 100%;
+}
+#img4444{
+    width: 100%;
+    height: 100%;
+}
+#img5555{
+    width: 100%;
+    height: 100%;
+}
+#img6666{
+    width: 100%;
+    height: 100%;
+}
+#img7777{
+    width: 100%;
+    height: 100%;
+}
+#img8888{
+    width: 100%;
+    height: 100%;
+}
+#img9999{
+    width: 100%;
+    height: 100%;
+}
+#img10101010{
+    width: 100%;
+    height: 100%;
+}
+/* #wrt3{
+    position: absolute;
+    left: 35px;
+    top: 5%;
+} */

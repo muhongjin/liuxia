@@ -1,0 +1,94 @@
+.box{
+    display: flex;
+    width:40%;
+    height:30%;
+    border:5px solid black;
+    box-shadow: 5px 5px 5px black;
+    position:absolute;
+    left:30%;
+    top:30%;
+}
+#pic1{
+    position: absolute;
+    top:5%;
+    left: 5%;
+    transition: opacity 1.5s linear 0.1s;
+    z-index: 0;
+}
+#pic2{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 15%;
+    left: 24%;
+}
+#pic3{
+    position: absolute;
+    height: 900px;
+    width: 1400px;
+    left: 3%;
+    z-index: -1;
+}
+#box1{
+    width:40%;
+    height:10%;
+    border:5px solid black;
+    box-shadow: 5px 5px 5px black;
+    position:relative;
+    left:30%;
+    top:15%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 19px;
+}
+#box1 input{
+    width: 100%;
+    height:100%;
+    color: #999;
+}
+/* #box2{
+    width:40%;
+    height:10%;
+    border:5px solid black;
+    box-shadow: 5px 5px 5px black;
+    position:absolute;
+    left:30%;
+    top:35%;
+    text-align:center;
+    font-size:19px;
+}
+#box2 input{
+    width: 100%;
+    height:100%;
+} */
+#box2{
+    width:20%;
+    height:20%;
+    border:5px solid black;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 20%;
+    position:absolute;
+    left:55%;
+    bottom:25%;
+    text-align: center;
+    font-size: 19px;
+}
+#box2:hover{
+    box-shadow: 5px 5px 5px inset;
+}
+#box3{
+    width:20%;
+    height:20%;
+    border:5px solid black;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 20%;
+    position:absolute;
+    left:25%;
+    bottom:25%;
+    text-align: center;
+    font-size: 19px;
+}
+#box3:hover{
+    box-shadow: 5px 5px 5px inset;
+}

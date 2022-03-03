@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <title>开始界面</title>
+    <link rel="stylesheet" href="css/css5.css">
+    <script src="jQuery.min.js"></script>
+</head>
+<body>
+    <div id="firstpage">
+        <img src="./image/firstpage.png" alt="">
+        <div id="elem1"><img src="./image/elem1.png" alt=""></div>
+        <div id="elem2"><img src="./image/elem2.png" alt=""></div>
+        <div id="elem3"><img src="./image/elem3.png" alt=""></div>
+        <div id="elem4"><img src="./image/elem4.png" alt=""></div>
+        <div id="elem5"><img src="./image/elem5.png" alt=""></div>
+        <div id="elem6"><img src="./image/elem6.png" alt=""></div>
+    </div>
+</body>
+</html>
+<script>
+    let elem1 = $('#elem1');
+    elem1.click(function(){
+        window.location.href = '注册1.html'
+    })
+    let elem2 = $('#elem2');
+    elem2.click(function(){
+        window.location.href = "page2.html";
+    });
+    let elem3 = $('#elem3');
+    elem3.click(function(){
+        window.location.href = '成长轨迹.html'
+    })
+    let elem4 = $('#elem4');
+    elem4.click(function(){
+        window.location.href = "page3.html";
+    })
+    let elem5 = $('#elem5');
+    elem5.click(function(){
+        window.location.href = '相关人员.html'
+    })
+    let elem6 = $('#elem6');
+    elem6.click(function(){
+        window.location.href= '明信片.html'
+    })
+</script>

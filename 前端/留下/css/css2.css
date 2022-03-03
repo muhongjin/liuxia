@@ -1,0 +1,231 @@
+#animation{width: 200px;
+    height:200px;
+    animation: donghua 7s infinite 0.5s alternate;
+}
+#animation>img{
+    width: 1500px;
+    height:800px;
+
+}
+@keyframes donghua{
+    30%
+    {
+        margin-left: -500px;
+}
+    75%{
+        margin-left: 500px;
+    }
+    100%{
+        margin-left: -500px;
+    }
+    
+}
+.box{
+    display: flex;
+    width:40%;
+    height:30%;
+    border:5px solid black;
+    box-shadow: 5px 5px 5px black;
+    position:absolute;
+    left:30%;
+    top:30%;
+}
+#box1{
+    width:40%;/*相对于父容器的百分之四十*/
+    height:20%;
+    border:5px solid black;
+    box-shadow: 5px 5px 5px black;
+    position:relative;
+    left:30%;
+    top:15%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 19px;
+}
+#box1 input{
+    width: 100%;
+    height:100%;
+    color: #999;
+}
+/* #box2{
+    width:40%;
+    height:10%;
+    border:5px solid black;
+    box-shadow: 5px 5px 5px black;
+    position:absolute;
+    left:30%;
+    top:35%;
+    text-align:center;
+    font-size:19px;
+}
+#box2 input{
+    width: 100%;
+    height:100%;
+    color: #999;
+}
+#box2 img {
+    width:35px;
+    height:19px;
+    position: relative;
+    bottom:20px;
+    left:105px;
+} */
+#box3{
+    width:20%;
+    height:20%;
+    border:5px solid black;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 20%;
+    position:absolute;
+    left:40%;
+    bottom:20%;
+    text-align: center;
+    font-size: 19px;
+}
+#box3:hover{
+    box-shadow: 5px 5px 5px inset;
+}
+.hezi{
+    display: none;
+    width: 90%;
+    height: 90%;
+    background-color: #ccc;
+    background:transparent;
+    opacity: 0.7;
+    border: 1px solid #ccc;
+    border-radius: 10%;
+    box-shadow: 5px 5px 5px black;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    transition:display 2s;
+}
+#hezi1:hover{
+    box-shadow: 5px 5px 5px inset;
+}
+#hezi2:hover{
+    box-shadow: 5px 5px 5px inset;
+}
+#hezi3:hover{
+    box-shadow: 5px 5px 5px inset;
+}
+#hezi4:hover{
+    box-shadow: 5px 5px 5px inset;
+}
+#hezi5:hover{
+    box-shadow: 5px 5px 5px inset;
+}
+#hezi6:hover{
+    box-shadow: 5px 5px 5px inset;
+}
+#hezi1{
+    width: 25%;
+    height: 40%;
+    border: 1px solid #ccc;
+    border-radius: 10%;
+    box-shadow: 5px 5px 5px black;
+    position:relative;
+    top:7.5%;
+    left: 7.5%;
+    text-align: center;
+    font-size: 200px;    
+}
+#hezi2{
+    width: 25%;
+    height: 40%;
+    border: 1px solid #ccc;
+    border-radius: 10%;
+    box-shadow: 5px 5px 5px black;
+    position:absolute;
+    top: 7.5%;
+    left:37.5%;
+    text-align: center;
+    font-size: 200px;   
+}
+#hezi3{
+    width: 25%;
+    height: 40%;
+    border: 1px solid #ccc;
+    border-radius: 10%;
+    box-shadow: 5px 5px 5px black;
+    position:absolute;
+    top: 7.5%;
+    right: 5%;
+    text-align: center;
+    font-size: 200px;
+}
+#hezi4{
+    width: 25%;
+    height: 40%;
+    border: 1px solid #ccc;
+    border-radius: 10%;
+    box-shadow: 5px 5px 5px black;
+    position:absolute;
+    bottom: 7.5%;
+    left: 7.5%;
+    text-align: center;
+    font-size: 200px;
+}
+#hezi5{
+    width: 25%;
+    height: 40%;
+    border: 1px solid #ccc;
+    border-radius: 10%;
+    box-shadow: 5px 5px 5px black;
+    position:absolute;
+    bottom: 7.5%;
+    left: 37.5%;
+    text-align: center;
+    font-size: 200px;
+}
+#hezi6{
+    width: 25%;
+    height: 40%;
+    border: 1px solid #ccc;
+    border-radius: 10%;
+    box-shadow: 5px 5px 5px black;
+    position:absolute;
+    bottom: 7.5%;
+    right: 5%;
+    text-align: center;
+    font-size: 200px;
+}
+#hezi7{
+    position: absolute;
+    top:3%;
+    left:5%;
+    font-size: 20px;
+    font-weight: bold;
+}
+#chahao1{
+    position:absolute;
+    top:10%;
+    left:30.5%;
+}
+#chahao2{
+    position:absolute;
+    top:10%;
+    left:60.5%;
+}
+#chahao3{
+    position:absolute;
+    top:10%;
+    left:93%;
+}
+#chahao4{
+    position:absolute;
+    top:55%;
+    left:30.5%;
+}
+#chahao5{
+    position:absolute;
+    top:55%;
+    left:60.5%;
+}
+#chahao6{
+    position:absolute;
+    top:55%;
+    left:93%;
+}
+

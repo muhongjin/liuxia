@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="登录1.css">
+    <script src="jQuery.min.js"></script>
+</head>
+<body>
+    <div class="f">
+        <div class="g">
+        <h2 class="k">记忆力大挑战</h2>
+       
+        <div class="h"><input type="text" id="un"  placeholder="输入你的用户名，开始游戏吧"></div>
+        <div class="l"><input type="password" id="pwd" placeholder="输入你的密码，开始游戏吧"></div>
+        <div class="i"><button id="btn3">进入游戏</button></div>
+        <div class="j"><button id="btn4">注册账号</button></div>
+       
+        
+        </div>
+        </div>
+        <script>
+             let btn3 = document.getElementById('btn3');
+             let btn4 = document.getElementById('btn4');
+             
+             btn4.addEventListener('click',function(){
+             alert('即将进入注册界面')
+             window.location.href='注册1.html'
+          })
+             btn3.addEventListener('click',function(){
+                 let un = $('#un').val();
+                 let pwd = $('#pwd').val();
+                 
+                $.ajax({
+                    url:'http://101.43.148.116:9004/v1/login',
+                    data:{name:un,password:pwd},
+                    dataType:'json',
+                    type:'GET',
+                    success:function(data){
+                        if(data.result === '用户名或密码错误，请重新输入'){
+                            alert(data.result)
+                            
+                        }
+                        else{
+                            
+                            alert(data.result)
+                             
+                             let un1 = JSON.stringify(un)
+                             console.log(un);
+                             sessionStorage.setItem('user',un1)
+                             window.location.href = 'page.html'
+                        }
+                        }                 
+             })
+            })
+        </script>
+</body>
+</html>

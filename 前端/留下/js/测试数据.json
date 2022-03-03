@@ -1,0 +1,18 @@
+{
+    "code":"200",
+    "message":"OK",
+    "results":[
+        {
+            "name":"user1",
+            "time":36.521
+        },
+        {
+            "name":"user2",
+            "time":16.25
+        },
+        {
+            "name":"user3",
+            "time":8.55
+        }
+    ]
+}

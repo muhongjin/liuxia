@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <title>排行榜</title>
+    <link rel="stylesheet" href="./css/css5.css">
+    <script src="jQuery.min.js"></script>
+</head>
+<body onload="elemLoad()">
+    <div id="ranking">
+        <img src="./image/ranking.png" alt="">
+        <div id="blackBox">
+            <div id="boxone">排行榜</div>
+            <div id="boxtwo">
+                <tr>
+                    <td><b>我的排名:</b></td>
+                </tr>
+            </div>
+            <div id="boxthree">
+                <table id="boxfour">
+                    <tr>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                    </tr>
+                    <tr>
+                        <td>23</td>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                    </tr>
+                    <tr>
+                        <td>27</td>
+                    </tr>
+                    <tr>
+                        <td>28</td>
+                    </tr>
+                    <tr>
+                        <td>29</td>
+                    </tr>
+                    <tr>
+                        <td>30</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let tab = document.getElementsByTagName('td')
+    function sortNum(a,b){
+        return a-b;
+    }
+    let user = JSON.parse(sessionStorage.getItem('user')) 
+    function elemLoad(){
+        $.ajax({
+            type:"GET",
+            url:"http://101.43.148.116:9002/v1/admin/twt/sorts/num",  
+            dataType:"json",
+            success:function(data1){
+                let usernum = data1.result;
+                $.ajax({
+                    type:"GET",
+                    url:"http://101.43.148.116:9002/v1/admin/twt/list",
+                    dataType:"json",
+                    data:{
+                        "head":1,
+                        "tail":usernum
+                    },
+                    success:function(data2){
+                        console.log(data2);
+                        let allArr = [];
+                        let results = data2.result;
+                        let i,j;
+                        for(i=0;i<results.length;i++){
+                            allArr.push(results[i]);
+                        }
+/*                         let timearr2 = timearr.sort(sortNum); */
+                        if(i<=30){
+                            for(j=0;j<i;j++){
+                                tab[j].innerHTML +='\t'+allArr[j].name+':'+'\t'+allArr[j].time+'秒';
+                            }
+                        }else{
+                            for(j=0;j<30;j++){
+                                tab[j].innerHTML +='\t'+allArr[j].name+':'+'\t'+allArr[j].time+'秒';
+                            }
+                        }            
+                    },
+                })
+            }
+        })
+    }
+</script>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成长轨迹</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        #a{
+            background-image: url("曲线1.png");
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-position: center,center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        #b{
+           position: absolute;
+           margin-left:550px;
+           width: 400px;
+           height: 100px;
+           top:30px;
+           background-color: aliceblue;
+           border: 1px solid  (0,0,0,0);
+           border-radius: 10px;
+           display: flex;
+           justify-content:space-between;
+           /*flex仅用于父级元素*/
+        }
+        #d{
+           position: absolute;
+           margin-left:550px;
+           width: 400px;
+           height: 50px;
+           top:5px;
+           background-color: lightblue;
+           border: 1px solid  (0,0,0,0);
+           border-radius: 10px;
+           color:aqua
+        }
+        #b span{
+           width: 120px;
+           height: 100px;
+           background-color:lightskyblue;
+           color: whitesmoke;
+           
+        }
+        #c{
+            background-image: url("曲线2.png");
+            position: relative;
+            width: 400px;
+            height: 600px;
+            margin: auto;
+            top:150px;
+            background-repeat: no-repeat;
+        }
+        #b em{
+          padding-left: 10px;
+          color: blanchedalmond;
+        }
+        #b u{
+          color:whitesmoke;
+        }
+    </style>
+    <script src="echarts.min.js"></script>
+    <script src="jQuery.min.js"></script>
+</head>
+<body>
+    <div id="a">
+    <div id="c"></div>
+    <div id="d">20连对最佳纪录</div>
+    <div id="b">
+      <span id="b1">最佳纪录:<u id="b1b"></u></span>
+      <span id="b2">排行榜:<em id="b2b"></em></span>
+      <span id="b3">等级状态:江湖豪侠</span></div>
+    </div>
+    <script>
+        let user = sessionStorage.getItem('user')
+        
+        $(function(){
+          //制定图标配置和数据
+          var user = JSON.parse(sessionStorage.getItem('user'))
+          var myChart = echarts.init(document.getElementById('c'))
+           console.log(user);
+          $.ajax({
+            url:'http://101.43.148.116:9002/v1/admin/twt/ranking',
+            type:'GET',
+            dataType:'json',
+            data:{name:user},
+            success:function(data){
+                
+                  console.log(data.result)
+                document.getElementById('b2b').innerHTML = data.result;
+                
+                
+                
+              
+            }
+
+          })
+          $.ajax({
+            url:'http://101.43.148.116:9003/v1/admin/twt/history',
+            type:'GET',
+            data:{name:user},
+            dataType:'json',
+            
+            success:function(data){
+              if(data.result === '无记录'){
+                alert('没有记录，请进行游戏')
+                window.location.href='page.html'
+              }
+              else{
+              let results = data.result;
+              let r
+              let xz = [];
+              let yz = []
+              for(r=0;r<results.length;r++){
+              xz.push(results[r].num)//push立大功!
+              yz.push(results[r].time)
+              console.log(xz);
+              console.log(yz);
+              
+              let min = Math.min.apply(null,yz)
+              document.getElementById('b1b').innerHTML =min
+              console.log(min);
+              myChart.hideLoading();
+
+            var option = ({
+            title:{
+              text:'个人成长轨迹',
+              //设置标题居中显示
+              x:'center',
+              y:'top',
+              textAlign:'center'
+            },
+            
+            xAxis:{
+              type:'category',
+              name:'第几次',
+              nameLocation:'middle',
+              data:xz
+            },
+            tooltip:{//折线图上面显示节点信息
+              trigger:'item',
+              formatter:'{b} : {c}'
+            },
+            yAxis:{
+              type:'value',
+              name:'时间',    
+            }, 
+            series:[
+              {
+                data:yz,
+                type:'line'
+              }
+            ],
+              
+           
+          })}
+           myChart.setOption(option);
+         
+              }
+              
+              
+           }
+          });
+          
+           })
+         
+          
+       
+    </script>
+</body>
+</html>

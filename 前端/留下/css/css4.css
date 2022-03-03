@@ -1,0 +1,416 @@
+html {
+    background-color: rgb(240, 234, 234);
+    overflow: hidden;
+}
+.box0{
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 40%;
+    left: 30%;
+    background-color: white;
+    box-shadow: 5px -2px 10px black;
+}
+#toppic{
+    position: absolute;
+    width: 40%;
+    left: 34.5%;
+    z-index: 100;
+    bottom: 35%;
+    transition: bottom 2s ease;
+}
+#toppic img{
+    width: 79%;
+}
+#botpic{
+    display: block;
+    position: absolute;
+    width: 40%;
+    left: 31.5%;
+    z-index: 100;
+    top: 17%;
+    transition: top 2s ease;
+}
+#botpic img{
+    width: 100%;
+}
+p#wrt1{
+    position: absolute;
+    font-weight: bolder;
+    font-size: 2em;
+    left: 265px;
+    top: 55px;
+}
+p#wrt2{
+    position: absolute;
+    color: grey;
+    left: 198px;
+    top: 405px;
+    visibility: hidden;
+}
+p#wrt3{
+    position: absolute;
+    font-weight: bolder;
+    font-size: 2em;
+    left: 60px;
+}
+p#wrt4{
+    position: absolute;
+    font-weight: bolder;
+    left: 50px;
+}
+p#wrt5{
+    position: absolute;
+    font-weight: bolder;
+    left: 30px;
+}
+#box5{
+    position: absolute;
+    height: 4%;
+    width: 15%;
+    left: 42.5%;
+    top: 85%;
+    font-weight: bolder;
+    color: white;
+    background-color: black;
+    border-radius: 30%;   
+    text-align: center;
+    line-height: 160%;
+    vertical-align: middle;  /*用line-height和vertical-align两个属性来控制文字在盒子中的垂直居中！*/
+    cursor: pointer;
+    box-shadow: 5px 5px 5px black;
+}
+#box6{
+    position: absolute;
+    height: 4%;
+    width: 20%;
+    left: 42.5%;
+    top: 80%;
+}
+#box7{
+    position: absolute;
+    height: 4%;
+    width: 15%;
+    left: 42.5%;
+    top: 85%;
+    font-weight: bolder;
+    color: white;
+    background-color: black;
+    border-radius: 30%;   
+    text-align: center;
+    line-height: 160%;
+    vertical-align: middle;  /*用line-height和vertical-align两个属性来控制文字在盒子中的垂直居中！*/
+    cursor: pointer;
+    box-shadow: 5px 5px 5px black;
+    display: none;
+}
+#tim{
+    position: absolute;
+    height: 80%;
+    width: 70%;
+    top: 10%;
+    left: 30%;
+    visibility: hidden;
+}
+#clock{
+    width: 30px;
+    height: 30px;
+    visibility: hidden;
+}
+.box1{
+    position: absolute;
+    height: 30%;
+    width: 50%;
+    left: 25%;
+    top: 20%; 
+    box-shadow:  0px 0px 10px 5px rgb(189, 189, 243);
+}
+#img1{
+    width: 100%;
+    height: 100%;
+}
+#img2{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#img3{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#img4{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#img5{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#img6{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#img7{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#img8{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#img9{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#img10{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.box2{
+    position: absolute;
+    background-color: white;
+    height: 15%;
+    width: 28%;
+    left: 4%;
+    top: 60%;
+    box-shadow: 5px 5px 5px rgb(189, 189, 243);
+    visibility: hidden;
+}
+.box2:hover{
+    box-shadow: 5px 5px 5px inset;
+}
+#img11{
+    width: 100%;
+    height: 100%;
+}
+#img22{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#img33{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#img44{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#img55{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#img66{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#img77{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#img88{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#img99{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#img1010{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+/* #judge1{                       为什么放在这里的css代码对网页不起作用？
+    height: 15%;
+    width: 28%;
+    left: 4%;
+    top: 60%;
+} */
+#tru1{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: 100;
+    left: 87%;
+    visibility: hidden;
+}
+#fal1{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: 100;
+    left: 87%;
+    visibility: hidden;
+}
+#tru2{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: 100;
+    left: 87%;
+    visibility: hidden;
+}
+#fal2{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: 100;
+    left: 87%;
+    visibility: hidden;
+}
+#tru3{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: 100;
+    left: 87%;
+    visibility: hidden;
+}
+#fal3{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: 100;
+    left: 87%;
+    visibility: hidden;
+}
+.box3{
+    position: absolute;
+    background-color: white;
+    height: 15%;
+    width: 28%;
+    left: 36%;
+    top: 60%;
+    box-shadow: 5px 5px 5px rgb(189, 189, 243);
+    visibility: hidden;
+}
+.box3:hover{
+    box-shadow: 5px 5px 5px inset;
+}
+#img111{
+    width: 100%;
+    height: 100%;
+}
+#img222{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#img333{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#img444{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#img555{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#img666{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#img777{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#img888{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#img999{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#img101010{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.box4{
+    position: absolute;
+    background-color: white;
+    height: 15%;
+    width: 28%;
+    right: 4%;
+    top: 60%;
+    box-shadow: 5px 5px 5px rgb(189, 189, 243);
+    visibility: hidden;
+}
+.box4:hover{
+    box-shadow: 5px 5px 5px inset;
+}
+#img1111{
+    width: 100%;
+    height: 100%;
+}
+#img2222{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#img3333{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#img4444{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#img5555{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#img6666{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#img7777{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#img8888{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#img9999{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#img10101010{
+    width: 100%;
+    height: 100%;
+    display: none;
+}

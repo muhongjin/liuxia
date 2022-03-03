@@ -1,0 +1,71 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.f{
+    background-image: url('登录.jfif');
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center,center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.g{
+    position:relative;
+    border-radius:20px;
+    border:1px solid black;
+    height:500px;
+    top:100px;
+    left:500px;
+    width:500px;
+    float:left;
+    background:rgb(75 94 104);
+
+}
+.h input{
+    position:relative;
+    top:100px;
+    height:50px;
+    width:300px;
+    left:120px; 
+    border:1px solid black;
+    border-radius:10px;
+      
+}
+.l input{
+    position:relative;
+    top:180px;
+    height:50px;
+    width:300px;
+    left:120px; 
+    border:1px solid black;
+    border-radius:10px;
+}
+.i button{
+    position:relative;
+    top:300px;
+    height:50px;
+    width:100px;
+    left:300px;
+    float:left;
+    border-radius:10px;
+}
+.j button{
+    position:relative;
+    top:300px;
+    height:50px;
+    width:100px;
+    left:30px;
+    border-radius:10px;
+    float:left;
+}
+.k{
+    position:relative;
+    top:30px;
+    left:210px;
+    color:aliceblue;
+    font-size:x-large;
+    font-family:cursive;
+}
