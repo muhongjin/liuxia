@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.remark.dao.SortMapper">
+    <select id="getSort" resultType="com.example.remark.entity.Sort">
+        select * from paihangbang where name =#{name};
+    </select>
+    <delete id="deleteSort" >
+        delete  from paihangbang where name =#{name};
+    </delete>
+    <insert id="addSort">
+        insert into paihangbang (name,time)values (#{name},#{time});
+    </insert>
+    <update id="changeSort">
+        update paihangbang set time = #{newTime} where name = #{name};
+    </update>
+    <select id="getNum" resultType="int">
+        select count(*) from paihangbang;
+    </select>
+    <select id="getTime" resultType="double">
+        select time from paihangbang where name = #{name};
+    </select>
+    <select id="getSingleNum" resultType="int">
+        select count(*) from paihangbang where name =#{name};
+    </select>
+    <select id="getRanking1" resultType="int">
+        select count(*) from paihangbang where time >#{time};
+    </select>
+    <select id="getRanking2" resultType="int">
+        select count(*) from paihangbang where time = #{time} and name > #{name};
+    </select>
+    <select id="getLists" resultType="com.example.remark.entity.Sort">
+        select * from paihangbang order by time,name limit ${len} offset ${head};
+    </select>
+</mapper>
